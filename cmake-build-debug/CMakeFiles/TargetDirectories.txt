@@ -1,0 +1,3 @@
+/Users/benjamin_perso/Library/CloudStorage/OneDrive-AssociationCesiViacesimail/CESI/2nd année/POO/Livrable/GameOfLifeV2/cmake-build-debug/CMakeFiles/GameOfLifeV2.dir
+/Users/benjamin_perso/Library/CloudStorage/OneDrive-AssociationCesiViacesimail/CESI/2nd année/POO/Livrable/GameOfLifeV2/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/benjamin_perso/Library/CloudStorage/OneDrive-AssociationCesiViacesimail/CESI/2nd année/POO/Livrable/GameOfLifeV2/cmake-build-debug/CMakeFiles/rebuild_cache.dir
