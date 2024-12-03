@@ -1,4 +1,6 @@
 #include "M_Grid.h"
+#include "M_Grid_test.hpp"
+#include "M_Cell_test.hpp"
 #include <vector>
 #include <thread>
 #include <chrono>
@@ -7,6 +9,8 @@
 #include "test_view.h"
 
 int main() {
+
+
     // Simulez la grille fournie par votre collègue
     std::vector<std::vector<int>> get_temp_grid = {
         {0, 1, 0, 0, 0},
@@ -17,6 +21,9 @@ int main() {
     };
 
     Grid grid(get_temp_grid);
+    run_cell_test();
+    run_grid_test(get_temp_grid);
+    std::cout <<"\n\n\nDébut du jeux : \n"<< std::endl;
 
     // Créez une instance de View et affichez la grille
     test_view view(grid.get_grid());
@@ -35,5 +42,5 @@ int main() {
         std::this_thread::sleep_for(std::chrono::seconds(1));
     }
 
-    return 0;
+    //return 0;
 }

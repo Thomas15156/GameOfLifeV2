@@ -49,7 +49,7 @@ int Grid::count_live_neighbors(int row, int col)
 
 const std::vector<std::vector<int>>& Grid::get_grid() const
 {
-    static std::vector<std::vector<int>> grid_state(rows, std::vector<int>(cols));
+    static std::vector grid_state(rows, std::vector<int>(cols));
     for (int i = 0; i < rows; i++){
         for (int j = 0; j < cols; j++)
         {
