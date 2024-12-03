@@ -1,6 +1,7 @@
 //
 // Created by benjamin Bourlet on 02/12/2024.
 //
+#include "M_Cell.h"
 #include <vector>
 
 #ifndef M_GRID_H
@@ -10,8 +11,8 @@
 
 class Grid {
 private:
-  std::vector<std::vector<int>> grid;
-  std::vector<std::vector<int>> next_grid;
+  std::vector<std::vector<Cell>> grid;
+  std::vector<std::vector<Cell>> next_grid;
   int rows;
   int cols;
 

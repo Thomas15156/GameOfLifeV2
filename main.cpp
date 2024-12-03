@@ -11,7 +11,7 @@ int main() {
     std::vector<std::vector<int>> get_temp_grid = {
         {0, 1, 0, 0, 0},
         {0, 0, 1, 0, 0},
-        {1, 1, 1, 0, 0},
+        {1, 1, 0, 0, 0},
         {0, 0, 0, 0, 0},
         {0, 0, 0, 0, 0}
     };
@@ -25,6 +25,11 @@ int main() {
     for (int cycle = 1; cycle < 10; ++cycle) {
         grid.next_generation();
         view.updateGrid(grid.get_grid());
+        if (grid.is_stable())
+        {
+            std::cout << "stable" << std::endl;
+            return 0;
+        }
         std::cout << "Next generation : " << cycle << " \n";
         view.displayGrid();
         std::this_thread::sleep_for(std::chrono::seconds(1));
