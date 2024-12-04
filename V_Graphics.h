@@ -13,6 +13,8 @@ class Graphics : public Display{
 protected:
     Grid& display_grid;
     sf::RenderWindow window;
+    sf::Clock clock;
+    sf::Time last_update;
 
 public:
     Graphics(Grid& display_grid);

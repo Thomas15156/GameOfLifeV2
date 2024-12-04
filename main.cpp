@@ -14,11 +14,11 @@ int main() {
     // Simulez la grille fournie par votre collègue
     std::string get_display_mode = "graphics";
     std::vector<std::vector<int>> get_temp_grid = {
-        {0, 1, 0, 0, 0},
-        {0, 0, 1, 0, 0},
-        {1, 1, 1, 0, 0},
-        {0, 0, 0, 0, 0},
-        {0, 0, 0, 0, 0}
+        {0, 0, 0, 0, 0, 0, 0, 0},
+        {0, 1, 0, 0, 0, 0, 0, 0},
+        {0, 0, 1, 0, 0, 0, 0, 0},
+        {1, 1, 1, 0, 0, 0, 0, 0},
+        {0, 0, 0, 0, 0, 0, 0, 0}
     };
 
 
@@ -33,7 +33,7 @@ int main() {
     std::cout << "je vais dans run" << std::endl;
     get_display -> run_display();
 
-    for (int cycle = 0; cycle < 10; ++cycle) {
+    for (int cycle = 0; cycle < 20; ++cycle) {
         grid.next_generation();
         view.updateGrid(grid.get_grid());
         if (grid.is_stable())
