@@ -1,18 +1,30 @@
-#include "C_Openfile.h"
+#include "File.h"
 #include "V_Interface.h"
-#include "V_Graphic.h"
-#include "V_Console.h"
 
+#include <string>
 #include <iostream>
 
 Interface::Interface() {}
 
-bool Interface::ChooseFile() {
-    Openfile openfile;
-    return openfile.runopenfile();
+int Interface::ChooseFile() {
+    File myFile;
+    myFile.Openfile();
+    myFile.InitGrid();
+
+    //Utiliser la méthode get_temp_grid pour obtenir la grille
+    std::vector<std::vector<int>> get_temp_grid = myFile.get_temp_grid();
+    for (const auto& row : get_temp_grid) {
+        for (int val : row) {
+            std::cout << val << " ";
+        }
+        std::cout << std::endl;
+    }
+
+    return 0;
 }
 
-bool Interface::ChooseMode() {
+
+std::string Interface::ChooseMode() {
     int mode;
     std::cout << "Choose the mode:" << std::endl;
     std::cout << "1. Console Mode" << std::endl;
@@ -21,15 +33,12 @@ bool Interface::ChooseMode() {
     std::cin >> mode;
 
     if (mode == 1) {
-        Console console;
-        console.runconsole();
-        return true;
+        get_display_mode = "console";
+        return get_display_mode;
     } else if (mode == 2) {
-        Graphic graphic;
-        graphic.rungraphic();
-        return true;
+        get_display_mode = "graphics";
+        return get_display_mode;
     } else {
         std::cerr << "Invalid mode selected." << std::endl;
-        return false;
     }
 }

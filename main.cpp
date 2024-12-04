@@ -4,13 +4,6 @@
 
 int main() {
     Interface interface;
-
-    // Si le fichier est ouvert avec succès, on lance ChooseMode
-    if (interface.ChooseFile()) {
-        interface.ChooseMode();
-    } else {
-        std::cout << "Failed to open file. Exiting..." << std::endl;
-    }
-
+    interface.ChooseFile();
     return 0;
 }
