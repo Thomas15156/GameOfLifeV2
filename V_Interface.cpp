@@ -3,16 +3,16 @@
 
 #include <string>
 #include <iostream>
-
+/*
 Interface::Interface() {}
 
 int Interface::ChooseFile() {
-    File myFile;
-    myFile.Openfile();
-    myFile.InitGrid();
+    File File;
+    File.Openfile();
+    File.InitGrid();
 
     //Utiliser la méthode get_temp_grid pour obtenir la grille
-    std::vector<std::vector<int>> get_temp_grid = myFile.get_temp_grid();
+    std::vector<std::vector<int>> get_temp_grid = File.get_temp_grid();
     for (const auto& row : get_temp_grid) {
         for (int val : row) {
             std::cout << val << " ";
@@ -42,3 +42,4 @@ std::string Interface::ChooseMode() {
         std::cerr << "Invalid mode selected." << std::endl;
     }
 }
+*/

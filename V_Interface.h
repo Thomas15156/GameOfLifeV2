@@ -10,7 +10,6 @@ public:
     int ChooseFile();
     std::string ChooseMode();
     std::string get_display_mode;
-
 };
 
 #endif

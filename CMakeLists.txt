@@ -9,5 +9,11 @@ add_executable(golp
         V_Interface.h
         File.cpp
         File.h
+        M_Cell.cpp
+        M_Cell.h
+        M_Grid.cpp
+        M_Grid.h
+        test_view.cpp
+        test_view.h
 )
 
