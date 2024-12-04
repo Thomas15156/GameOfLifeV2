@@ -21,5 +21,3 @@ void test_view::displayGrid() const {
 void test_view::updateGrid(const std::vector<std::vector<int>>& new_grid) {
     grid = new_grid;
 }
-
-
