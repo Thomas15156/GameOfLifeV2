@@ -20,7 +20,7 @@ private:
     Grid(const std::vector<std::vector<int>>& get_temp_grid );
     void next_generation();
     int count_live_neighbors(int row, int col);
-    const std::vector<std::vector<int>>& get_grid() const;
+  std::vector<std::vector<int>>& get_grid() const;
     bool is_stable() const;
 };
 

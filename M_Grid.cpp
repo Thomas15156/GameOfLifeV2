@@ -47,7 +47,7 @@ int Grid::count_live_neighbors(int row, int col)
     return count_live;
 }
 
-const std::vector<std::vector<int>>& Grid::get_grid() const
+std::vector<std::vector<int>>& Grid::get_grid() const
 {
     static std::vector<std::vector<int>> grid_state(rows, std::vector<int>(cols));
     for (int i = 0; i < rows; i++){
@@ -71,4 +71,3 @@ bool Grid::is_stable() const
     }
     return true;
 }
-
