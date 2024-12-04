@@ -9,18 +9,17 @@
 #include <ostream>
 
 Graphics::Graphics(Grid& display_grid)
-: display_grid(display_grid), window(sf::VideoMode(800, 600), "Conway's Game of Life"), last_update(sf::seconds(0.9f)) {}
+: display_grid(display_grid), window(sf::VideoMode(800, 600), "Conway's Game of Life"), last_update(sf::seconds(0.2f)) {}
 
 void Graphics::run_display()
 {
     int window_width = window.getSize().x;
     int window_height = window.getSize().y;
-    int rows = display_grid.get_grid().size();
-    int cols = display_grid.get_grid()[0].size();
-    int cell_size = std::min(window_width / cols, window_height / rows);
+    int cell_size = 10;
+    int new_rows = window_width / cell_size;
+    int new_cols = window_height / cell_size;
 
-    window.setSize(sf::Vector2u(cols * cell_size, rows * cell_size));
-
+    display_grid.resize(new_rows, new_cols);
 
     while (window.isOpen()){
         sf::Event event;
@@ -38,7 +37,6 @@ void Graphics::run_display()
         }
 
         window.clear();
-        int cell_size = window.getSize().x / display_grid.get_grid()[0].size();
         for (size_t i = 0; i < display_grid.get_grid().size(); i++){
             for (size_t j = 0; j < display_grid.get_grid()[i].size(); j++){
                 sf::RectangleShape cell(sf::Vector2f(cell_size,cell_size));

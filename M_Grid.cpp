@@ -59,6 +59,22 @@ std::vector<std::vector<int>>& Grid::get_grid() const
     return grid_state;
 }
 
+void Grid::resize(int new_rows, int new_cols)
+{
+    std::vector<std::vector<Cell>> new_grid(new_rows, std::vector<Cell>(new_cols));
+
+    for (int i = 0; i < std::min(rows, new_rows); i++)
+    {
+        for (int j = 0; j < std::min(cols, new_cols); j++)
+        {
+            new_grid[i][j].set_state(grid[i][j].get_state());
+        }
+    }
+    rows = new_rows;
+    cols = new_cols;
+    grid = new_grid;
+    next_grid = new_grid;
+}
 
 
 
