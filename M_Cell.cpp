@@ -8,9 +8,9 @@ void Cell::set_state(int state) {this -> state = state;}
 
 int Cell::next_state(int live_neighbours) const
 {
-    if (state == 1 && (live_neighbours == 2 || live_neighbours == 3))
-    {return 1;} // survie de la cellule
-    else if (state == 0 && live_neighbours == 3)
-    {return 1;} // naissance de la cellule
-    else {return 0;} // mort de la cellule
+  if (state == 1 && (live_neighbours == 2 || live_neighbours == 3))
+  {return 1;} // survie de la cellule
+  else if (state == 0 && live_neighbours == 3)
+  {return 1;}
+  else {return 0;}
 }

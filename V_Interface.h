@@ -3,13 +3,18 @@
 
 #include <string>
 
-
 class Interface {
 public:
     Interface();
-    int ChooseFile();
+    std::string get_display_mode() const;
     std::string ChooseMode();
-    std::string get_display_mode;
+    bool ChooseToroidal();
+    int ChooseUpdateInterval(); // Nouvelle méthode pour choisir l'intervalle de mise à jour
+
+private:
+    std::string display_mode;
+    bool is_toroidal;
+    int update_interval; // Ajouter un membre pour stocker l'intervalle de mise à jour
 };
 
 #endif

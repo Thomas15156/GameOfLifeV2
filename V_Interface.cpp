@@ -1,28 +1,7 @@
-#include "File.h"
 #include "V_Interface.h"
-
-#include <string>
 #include <iostream>
-/*
-Interface::Interface() {}
 
-int Interface::ChooseFile() {
-    File File;
-    File.Openfile();
-    File.InitGrid();
-
-    //Utiliser la méthode get_temp_grid pour obtenir la grille
-    std::vector<std::vector<int>> get_temp_grid = File.get_temp_grid();
-    for (const auto& row : get_temp_grid) {
-        for (int val : row) {
-            std::cout << val << " ";
-        }
-        std::cout << std::endl;
-    }
-
-    return 0;
-}
-
+Interface::Interface() : display_mode("invalid"), update_interval(1000) {} // Initialiser update_interval
 
 std::string Interface::ChooseMode() {
     int mode;
@@ -32,14 +11,40 @@ std::string Interface::ChooseMode() {
     std::cout << "Enter the number of the mode: ";
     std::cin >> mode;
 
-    if (mode == 1) {
-        get_display_mode = "console";
-        return get_display_mode;
-    } else if (mode == 2) {
-        get_display_mode = "graphics";
-        return get_display_mode;
-    } else {
-        std::cerr << "Invalid mode selected." << std::endl;
+    switch (mode) {
+        case 1:
+            display_mode = "console";
+        break;
+        case 2:
+            display_mode = "graphics";
+        break;
+        default:
+            std::cerr << "Invalid mode selected." << std::endl;
+        display_mode = "invalid";
+        break;
     }
+    return display_mode;
 }
-*/
+
+bool Interface::ChooseToroidal() {
+    char choice;
+    std::cout << "Do you want to enable toroidal grid? (y/n): ";
+    std::cin >> choice;
+
+    if (choice == 'y' || choice == 'Y') {
+        is_toroidal = true;
+    } else {
+        is_toroidal = false;
+    }
+    return is_toroidal;
+}
+
+int Interface::ChooseUpdateInterval() {
+    std::cout << "Enter the update interval in milliseconds: ";
+    std::cin >> update_interval;
+    return update_interval;
+}
+
+std::string Interface::get_display_mode() const {
+    return display_mode;
+}
