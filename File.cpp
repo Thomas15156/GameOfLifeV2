@@ -78,6 +78,9 @@ void File::InitGrid() {
     file.close();
 }
 
+std::string File::get_filename() {return filename;}
+
+
 
 std::vector<std::vector<int>> File::temp_grid() const {
     return grid;

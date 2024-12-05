@@ -15,10 +15,14 @@ protected:
     sf::RenderWindow window;
     sf::Clock clock;
     sf::Time last_update;
+    int cell_size;
 
 public:
     Graphics(Grid& display_grid);
     void run_display() override;
+    void initialize_grid();
+    void render_grid();
+    void backgound_grid();
 };
 
 

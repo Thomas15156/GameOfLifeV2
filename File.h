@@ -9,6 +9,7 @@ public:
     File();
     void Openfile();
     void InitGrid();
+    std::string get_filename();
     std::vector<std::vector<int>> temp_grid() const; // Méthode pour obtenir la grille
 private:
     int row, col;
