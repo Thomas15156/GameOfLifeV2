@@ -1,9 +1,19 @@
-cmake_minimum_required(VERSION 3.14)
+cmake_minimum_required(VERSION 3.29)
 project(GameOfLifeV2)
 
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
+include(FetchContent)
+set(BUILD_SHARED_LIBS OFF)
+FetchContent_Declare(
+        SFML
+        GIT_REPOSITORY https://github.com/SFML/SFML.git
+        GIT_TAG 2.6.1
+)
+FetchContent_MakeAvailable(SFML)
 
-set(SOURCE_FILES main.cpp
+
+set(CMAKE_CXX_STANDARD 20)
+
+add_executable(GameOfLifeV2 main.cpp
         File.cpp File.h
         M_Cell.cpp M_Cell.h
         M_Grid.cpp M_Cell.h
@@ -12,9 +22,5 @@ set(SOURCE_FILES main.cpp
         V_Graphics.cpp V_Graphics.h
         V_Interface.cpp V_Interface.h)
 
-add_executable(GameOfLifeV2 ${SOURCE_FILES})
-include_directories(/usr/local/include)
+target_link_libraries(GameOfLifeV2 sfml-graphics)
 
-find_package(SFML 2.5 COMPONENTS system window graphics network audio REQUIRED)
-include_directories(${SFML_INCLUDE_DIRS})
-target_link_libraries(GameOfLifeV2 sfml-system sfml-window sfml-graphics sfml-audio sfml-network)
