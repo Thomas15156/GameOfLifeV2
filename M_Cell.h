@@ -1,11 +1,5 @@
-//
-// Created by benjamin Bourlet on 03/12/2024.
-//
-
 #ifndef M_CELL_H
 #define M_CELL_H
-
-
 
 class Cell {
 public:
@@ -18,6 +12,4 @@ private:
   int state;
 };
 
-
-
-#endif //M_CELL_H
+#endif // M_CELL_H

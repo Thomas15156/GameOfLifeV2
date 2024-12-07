@@ -1,55 +1,29 @@
 #include "V_Graphics.h"
 #include <SFML/Graphics.hpp>
 #include <iostream>
-#include <ctime>
-#include <cstdlib>
 
-Graphics::Graphics(Grid& display_grid)
-: display_grid(display_grid), window(sf::VideoMode(800, 600), "Conway's Game of Life"), last_update(sf::microseconds(0.1)), cell_size(10) {}
-
-void Graphics::backgound_grid(){
-    sf::Color gridColor(200, 200, 200); // Light grey color for the grid lines
-    for (int x = 0; x <= window.getSize().x; x += cell_size) {
-        sf::Vertex line[] = {
-            sf::Vertex(sf::Vector2f(x, 0), gridColor),
-            sf::Vertex(sf::Vector2f(x, window.getSize().y), gridColor)
-        };
-        window.draw(line, 2, sf::Lines);
-    }
-    for (int y = 0; y <= window.getSize().y; y += cell_size) {
-        sf::Vertex line[] = {
-            sf::Vertex(sf::Vector2f(0, y), gridColor),
-            sf::Vertex(sf::Vector2f(window.getSize().x, y), gridColor)
-        };
-        window.draw(line, 2, sf::Lines);
-    }
-}
-
-
-
-void Graphics::initialize_grid() {
-    std::srand(std::time(0));
-    for (int y = 0; y < display_grid.get_grid().size(); ++y) {
-        for (int x = 0; x < display_grid.get_grid()[0].size(); ++x) {
-            display_grid.get_grid()[y][x] = std::rand() % 2;  // Randomly initialize cells as alive or dead
-        }
-    }
-}
+Graphics::Graphics(Grid& display_grid, int update_interval)
+    : display_grid(display_grid), window(sf::VideoMode(display_grid.get_grid()[0].size() * 10, display_grid.get_grid().size() * 10), "Game of Life"), cell_size(10), update_interval(update_interval) {}
 
 void Graphics::render_grid() {
     window.clear();
-    backgound_grid();
     sf::RectangleShape cell(sf::Vector2f(cell_size - 1.0f, cell_size - 1.0f));
-    for (int y = 0; y < display_grid.get_grid().size(); ++y) {
-        for (int x = 0; x < display_grid.get_grid()[0].size(); ++x) {
-            if (display_grid.get_grid()[y][x] == 1) {
-                cell.setFillColor(sf::Color::Black);
-            } else if (display_grid.get_grid()[y][x] == 2) {
-                cell.setFillColor(sf::Color::Red); // Obstacle mort
-            } else if (display_grid.get_grid()[y][x] == 3) {
-                cell.setFillColor(sf::Color::Green); // Obstacle vivant
-            } else {
-                cell.setFillColor(sf::Color::White);
+    const auto& grid = display_grid.get_grid(); // Stocker le résultat de get_grid() dans une variable locale
+    for (size_t y = 0; y < grid.size(); ++y) {
+        for (size_t x = 0; x < grid[0].size(); ++x) {
+            switch (grid[y][x]) {
+                case 1:
+                    cell.setFillColor(sf::Color::Black);
+                    break;
+                case 2:
+                    cell.setFillColor(sf::Color::Red); // Obstacle mort
+                    break;
+                case 3:
+                    cell.setFillColor(sf::Color::Green); // Obstacle vivant
+                    break;
+                default:
+                    cell.setFillColor(sf::Color::White);
+                    break;
             }
             cell.setPosition(x * cell_size, y * cell_size);
             window.draw(cell);
@@ -57,15 +31,12 @@ void Graphics::render_grid() {
     }
     window.display();
 }
+
 void Graphics::run_display() {
-    int window_width = window.getSize().x;
-    int window_height = window.getSize().y;
-    int new_rows = window_height / cell_size;
-    int new_cols = window_width / cell_size;
+    render_grid();
+}
 
-    display_grid.resize(new_rows, new_cols);
-    initialize_grid();
-
+void Graphics::run() {
     while (window.isOpen()) {
         sf::Event event;
         while (window.pollEvent(event)) {
@@ -74,7 +45,7 @@ void Graphics::run_display() {
             }
         }
 
-        if (clock.getElapsedTime() >= last_update) {
+        if (clock.getElapsedTime().asMilliseconds() >= update_interval) {
             display_grid.next_generation();
             if (display_grid.is_stable()) {
                 std::cout << "Grid is stable, closing window." << std::endl;
@@ -83,6 +54,6 @@ void Graphics::run_display() {
             clock.restart();
         }
 
-        render_grid();
+        run_display();
     }
 }

@@ -3,14 +3,19 @@
 
 #include <string>
 
-
 class Interface {
 public:
     Interface();
-    int ChooseFile();
-    std::string get_display_mode();
     std::string ChooseMode();
+    float ChooseUpdateInterval();
+    bool ChooseToroidal();
+    std::string get_display_mode() const;
+    int get_update_interval() const;
+
+private:
     std::string display_mode;
+    bool is_toroidal;
+    int update_interval;
 };
 
-#endif
+#endif // V_INTERFACE_H

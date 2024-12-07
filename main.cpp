@@ -1,52 +1,24 @@
 #include "M_Grid.h"
-#include <vector>
-#include <thread>
-#include <chrono>
-#include <iostream>
-
 #include "V_Display.h"
 #include "File.h"
-#include "V_Save.h"
 #include "V_Interface.h"
-
+#include <memory>
+#include <iostream>
 
 int main() {
     File file;
     Interface interface;
     file.Openfile();
     file.InitGrid();
-    //interface.ChooseMode();
+    interface.ChooseMode();
 
-    // Simulez la grille fournie par votre collègue
-    std::string get_display_mode = "graphics";
-    std::cout << file.get_filename() << std::endl;
-    bool is_toroidal = false;
-
-
-
+    bool is_toroidal = interface.ChooseToroidal();
+    int update_interval = (interface.get_display_mode() == "graphics") ? interface.get_update_interval() : 10;
 
     Grid grid(file.temp_grid(), is_toroidal);
-    Save save(grid);
-    // Créez une instance de View et affichez la grille
-    Display* get_display = choose_display_mode(get_display_mode, grid);
-    get_display -> run_display();
+    std::unique_ptr<Display> display = choose_display_mode(interface.get_display_mode(), grid, file, update_interval);
 
-    for (int cycle = 0; cycle < 20; ++cycle) {
-        grid.next_generation();
-        //save.save_to_file(file.get_filename(),cycle);
-        get_display -> run_display();
-        if (grid.is_stable())
-        {
-            std::cout << "stable" << std::endl;
-            return 0;
-        }
-        std::cout << "Next generation : " << cycle << " \n";
-        grid.next_generation();
-        //save.save_to_file(file.get_filename(),cycle);
-        get_display -> run_display();
-        std::this_thread::sleep_for(std::chrono::seconds(1));
-    }
-
+    display->run();
 
     return 0;
 }

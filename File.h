@@ -9,11 +9,15 @@ public:
     File();
     void Openfile();
     void InitGrid();
-    std::string get_filename();
-    std::vector<std::vector<int>> temp_grid() const; // Méthode pour obtenir la grille
+    int CreateFolder();
+    int Savefile(int generation);
+    std::string get_filename() const;
+    std::vector<std::vector<int>> temp_grid() const;
+
 private:
     int row, col;
     std::string filename;
+    std::string foldername;
     std::vector<std::vector<int>> grid;
 };
 
