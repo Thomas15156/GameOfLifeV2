@@ -36,3 +36,8 @@ Lorsque l'on exécute le code, on doit renseigner un fichier en entrée dans la 
 Une fois entré correctement, il y a un message de succès et on passe à la sélection du mode d'affichage **Graphique** ou **Console**.
 
 ### **Mode Console**
+Lorsque l'on choisit ce mode, on nous demande d'activer ou non l'option de la grille torique. *<span style="color:red">Une grille torique </span>est un type de grille où les bords opposés sont connectés, formant ainsi une surface sans fin, comme un tore, où les cellules aux bords se connectent entre elles.*
+Une fois choisi, le programme crée automatiquement un dossier de sortie dans le répertoire courant (*cmake-build-debug* sur CLion), basé sur le nom du fichier d'entrée <nom_du_fichier_dentrée>_out, et si ce dossier existe déjà, une erreur est générée pour éviter toute perte de données. Si le dossier n'existe pas, il renvoie un message de succès puis lance les générations. **Pour des soucis de performance, elles sont limitées à 100 générations, mais cela peut être modifié facilement dans le code si besoin**. Chaque génération est sauvegardée fichier par fichier.
+
+### **Mode Grpahique**
+Lorsque l'on choisit ce mode, comme pour l'autre mode on nous demande l'activation de la grille torique 
