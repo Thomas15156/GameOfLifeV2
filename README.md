@@ -36,12 +36,12 @@ Lorsque l'on exécute le code, on doit renseigner un fichier en entrée dans la 
 Une fois entré correctement, il y a un message de succès et on passe à la sélection du mode d'affichage **Graphique** ou **Console**.
 
 ### **Mode Console**
-Lorsque l'on choisit ce mode, on nous demande d'activer ou non l'option de la grille torique. *Une grille torique est un type de grille où les bords opposés sont connectés, formant ainsi une surface sans fin, comme un tore, où les cellules aux bords se connectent entre elles.*
-Une fois choisi, le programme crée automatiquement un dossier de sortie dans le répertoire courant (*cmake-build-debug* sur CLion), basé sur le nom du fichier d'entrée <nom_du_fichier_dentrée>_out, et si ce dossier existe déjà, une erreur est générée pour éviter toute perte de données. Si le dossier n'existe pas, il renvoie un message de succès puis lance les générations. **Pour des soucis de performance, elles sont limitées à 100 générations, mais cela peut être modifié facilement dans le code si besoin**. Chaque génération est sauvegardée fichier par fichier.
+Lorsque l'on choisit ce mode, il est demandé d'activer ou non l'option de la grille torique. *Une grille torique est un type de grille où les bords opposés sont connectés, formant ainsi une surface sans fin, comme un tore, où les cellules aux bords se connectent entre elles.*
+Une fois l'option choisie, le programme crée automatiquement un dossier de sortie dans le répertoire courant (*cmake-build-debug* sur CLion), basé sur le nom du fichier d'entrée <nom_du_fichier_dentrée>_out. Si ce dossier existe déjà, une erreur est générée pour éviter toute perte de données. Si le dossier n'existe pas, un message de succès est renvoyé et les générations sont lancées. Pour des raisons de performance, le nombre de générations est limité à 100, mais cela peut être facilement modifié dans le code si nécessaire. Chaque génération est sauvegardée fichier par fichier.
 
-### **Mode Grpahique**
-Lorsque l'on choisit ce mode, comme pour l'autre mode on nous demande l'activation de la grille torique. Une fois choisit on nous demande d'entrée la fréquence de rafraichissement puis l'affichage graphique s'ouvre. 
-Syntaxe graphique :
+### **Mode Graphique**
+Lorsque vous choisissez ce mode, comme pour l'autre mode, il vous sera demandé d'activer la grille torique. Une fois cette option sélectionnée, vous devrez entrer la fréquence de rafraîchissement souhaitée. Et pour finir, l'affichage graphique s'ouvrira et vous pourrez observer le jeu en temps réel. À noter que ce mode ne prévoit pas de sauvegarde.
+Représentation visuelle:
 **⬜️ 0 cellules mortes**
 **⬛️ 1 cellules vivantes**
 **🟥 2 cellules mortes immuables**
