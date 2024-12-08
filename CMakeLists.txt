@@ -18,7 +18,7 @@ add_executable(GameOfLifeV2 main.cpp
         M_Grid.cpp M_Cell.h
         V_Console.cpp V_Console.h
         V_Display.cpp V_Display.h
-        V_Graphics.cpp V_Graphics.h
+        V_Graphic.cpp V_Graphic.h
         V_Interface.cpp V_Interface.h
 )
 

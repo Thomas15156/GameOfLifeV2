@@ -18,7 +18,7 @@ std::string Interface::ChooseMode() {
         break;
         case 2:
             display_mode = "graphics";
-        update_interval = ChooseUpdateInterval(); // Assigner la valeur retournée
+        update_interval = ChooseUpdateInterval();
         break;
         default:
             std::cerr << "Invalid mode selected. Please enter 1 or 2." << std::endl;

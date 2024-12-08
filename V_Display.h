@@ -13,6 +13,6 @@ public:
     virtual void run() = 0;
 };
 
-std::unique_ptr<Display> choose_display_mode(const std::string& display_mode, Grid& display_grid, File& file, int update_interval); // Ajouter update_interval
+std::unique_ptr<Display> choose_display_mode(const std::string& display_mode, Grid& display_grid, File& file, int update_interval);
 
 #endif //DISPLAY_H

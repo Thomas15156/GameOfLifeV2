@@ -14,7 +14,7 @@ void File::Openfile() {
     std::getline(std::cin, filename);
     foldername = filename + "_out";
     std::cout << "=============================\n";
-    std::cout << "Vérification: " << filename << std::endl;
+    std::cout << "Verification: " << filename << std::endl;
 
     if (filename.substr(filename.find_last_of(".") + 1) != "txt") {
         std::cerr << "Error: The file is not a .txt file." << std::endl;
@@ -73,13 +73,13 @@ int File::CreateFolder() {
     std::filesystem::path dir = foldername;
     try {
         if (std::filesystem::create_directory(dir)) {
-            std::cout << "Dossier créé avec succès : " << dir << std::endl;
+            std::cout << "Folder successfully created: " << dir << std::endl;
         } else {
-            std::cout << "Le dossier existe déjà ou n'a pas pu être créé." << std::endl;
+            std::cout << "The folder already exists or could not be created." << std::endl;
             std::exit(EXIT_FAILURE);
         }
     } catch (const std::filesystem::filesystem_error& e) {
-        std::cerr << "Erreur lors de la création du dossier : " << e.what() << std::endl;
+        std::cerr << "Error while creating the folder: " << e.what() << std::endl;
         return -1;
     }
     return 0;
