@@ -73,6 +73,18 @@ Lorsque vous choisissez ce mode, comme pour l'autre mode, il vous sera demandé 
 
 🟩 **Cellules vivantes immuables**
 
+<ins> Même exemple mais avec affichage graphique: </ins>
+
+```plaintext
+5 10
+⬛️⬛️⬜️⬛️⬛️⬛️⬛️⬛️⬛️⬛️
+⬛️⬛️⬛️⬜️⬛️⬛️⬛️⬛️⬛️⬛️
+⬛️⬜️⬜️⬜️⬛️⬛️🟥🟥🟥⬛️
+⬛️⬛️⬛️⬛️⬛️⬛️⬛️⬛️⬛️⬛️
+⬛️⬛️⬛️⬛️⬛️⬛️⬛️🟩🟩⬛️
+````
+
+
 ---
 
  [Patterns créés par mes soins](https://drive.google.com/drive/folders/1abUCeNt5N0Q2OFq-pnItLVtpspVcLbbx?usp=drive_link)
