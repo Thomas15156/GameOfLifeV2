@@ -45,7 +45,7 @@ int Grid::count_live_neighbors(int row, int col) const {
             }
 
             int state = grid[new_row][new_col].get_state();
-            if (state == 1 || state == 3) { // Compter les cellules vivantes et les obstacles vivants
+            if (state == 1 || state == 3) {
                 count_live += 1;
             }
         }

@@ -17,10 +17,10 @@ void Graphic::render_grid() {
                     cell.setFillColor(sf::Color::Black);
                     break;
                 case 2:
-                    cell.setFillColor(sf::Color::Red); // Obstacle mort
+                    cell.setFillColor(sf::Color::Red);
                     break;
                 case 3:
-                    cell.setFillColor(sf::Color::Green); // Obstacle vivant
+                    cell.setFillColor(sf::Color::Green);
                     break;
                 default:
                     cell.setFillColor(sf::Color::White);

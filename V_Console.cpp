@@ -19,6 +19,11 @@ void Console::run_display() {
 void Console::run() {
     file.CreateFolder();
 
+
+// Enable infinite number of generations
+//for (int cycle = 1; ; ++cycle) {
+
+
     for (int cycle = 1; cycle <= 100; ++cycle) {
         display_grid.next_generation();
         std::this_thread::sleep_for(std::chrono::seconds(1));
