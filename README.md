@@ -21,12 +21,13 @@ Puis le pattern en dessous ne comporte que **les entiers 0 , 1 ,2 et 3 :**
 > Le fichier doit bien évidemment être un .txt sinon il ne sera pas pris en compte.
 
 Exemple : 
-5 10
-0 0 1 0 0 0 0 0 0 0
-0 0 0 1 0 0 0 0 0 0
-0 1 1 1 0 0 3 3 3 0
-0 0 0 0 0 0 0 0 0 0
-0 0 0 0 0 0 0 2 2 0
+| 5 | 10 |
+|---|----|
+| 0 | 0  | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| 0 | 0  | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 0 |
+| 0 | 1  | 1 | 1 | 0 | 0 | 3 | 3 | 3 | 0 |
+| 0 | 0  | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| 0 | 0  | 0 | 0 | 0 | 0 | 0 | 2 | 2 | 0 |
 
 **Comment entrer le paterne ?**
 Lorsque l'on exécute le code, on doit renseigner un fichier en entrée dans la console. Il faut renseigner soit l'adresse du fichier comme ceci ()ou uniquement le nom du fichier si vous mettez votre .txt dans le dossier adapter à votre application pour Clion par exemple dans le dossier *cmake-build-debug*.
