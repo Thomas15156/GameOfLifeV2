@@ -23,13 +23,13 @@ Tout d'abord, il faut que le pattern que vous voulez utiliser ait une **syntaxe 
 
 **Puis le pattern en dessous ne comporte que les entiers 0 , 1 ,2 et 3 :**
 
- **0 cellules mortes**
+ +**0 cellules mortes**
 
- **1 cellules vivantes**
+ +**1 cellules vivantes**
 
- **2 cellules mortes immuables**
+ +**2 cellules mortes immuables**
 
- **3 cellules vivantes immuables**
+ +**3 cellules vivantes immuables**
 
 > [!CAUTION]
 > Le fichier doit bien évidemment être un .txt sinon il ne sera pas pris en compte.
