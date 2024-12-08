@@ -17,7 +17,7 @@ Puis le pattern en dessous ne comporte que **les entiers 0 , 1 ,2 et 3 :**
 -2 cellules mortes immuables 
 -3 cellules vivantes immuables 
 
-> [!Attention]
+> [!WARNING]
 > Le fichier doit bien évidemment être un .txt sinon il sera pas pris en compte.
 
 Exemple : 
