@@ -44,7 +44,7 @@ Exemple :
 ````
 
 **Comment entrer le pattern ?**
-Lorsque l'on exécute le code, on doit renseigner un fichier en entrée dans la console. Il faut renseigner soit l'adresse du fichier comme ceci (**/chemin/vers/le/fichier.txt**)ou uniquement le nom du fichier si vous mettez votre .txt dans le dossier adapter à votre application pour Clion par exemple dans le dossier *cmake-build-debug*.
+Lorsque l'on exécute le code, on doit renseigner un fichier en entrée dans la console. Il faut renseigner soit l'adresse du fichier comme ceci ( **/chemin/vers/le/fichier.txt** )ou uniquement le nom du fichier si vous mettez votre .txt dans le dossier adapter à votre application pour Clion par exemple dans le dossier ( *cmake-build-debug* ).
 
 Une fois entré correctement, il y a un message de succès et on passe à la sélection du mode d'affichage **Graphique** ou **Console**.
 
