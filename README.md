@@ -30,13 +30,15 @@ Exemple :
 0 0 0 0 0 0 0 2 2 0
 ````
 
+<span style="color:red">Une grille torique </span>
+
 **Comment entrer le paterne ?**
 Lorsque l'on exécute le code, on doit renseigner un fichier en entrée dans la console. Il faut renseigner soit l'adresse du fichier comme ceci ()ou uniquement le nom du fichier si vous mettez votre .txt dans le dossier adapter à votre application pour Clion par exemple dans le dossier *cmake-build-debug*.
 
 Une fois entré correctement, il y a un message de succès et on passe à la sélection du mode d'affichage **Graphique** ou **Console**.
 
 ### **Mode Console**
-Lorsque l'on choisit ce mode, on nous demande d'activer ou non l'option de la grille torique. *<span style="color:red">Une grille torique </span>est un type de grille où les bords opposés sont connectés, formant ainsi une surface sans fin, comme un tore, où les cellules aux bords se connectent entre elles.*
+Lorsque l'on choisit ce mode, on nous demande d'activer ou non l'option de la grille torique. *Une grille torique est un type de grille où les bords opposés sont connectés, formant ainsi une surface sans fin, comme un tore, où les cellules aux bords se connectent entre elles.*
 Une fois choisi, le programme crée automatiquement un dossier de sortie dans le répertoire courant (*cmake-build-debug* sur CLion), basé sur le nom du fichier d'entrée <nom_du_fichier_dentrée>_out, et si ce dossier existe déjà, une erreur est générée pour éviter toute perte de données. Si le dossier n'existe pas, il renvoie un message de succès puis lance les générations. **Pour des soucis de performance, elles sont limitées à 100 générations, mais cela peut être modifié facilement dans le code si besoin**. Chaque génération est sauvegardée fichier par fichier.
 
 ### **Mode Grpahique**
