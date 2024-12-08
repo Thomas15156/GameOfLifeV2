@@ -43,14 +43,19 @@ Exemple :
 0 0 0 0 0 0 0 2 2 0
 ````
 
-**Comment entrer le paterne ?**
+**Comment entrer le pattern ?**
 Lorsque l'on exécute le code, on doit renseigner un fichier en entrée dans la console. Il faut renseigner soit l'adresse du fichier comme ceci (**/chemin/vers/le/fichier.txt**)ou uniquement le nom du fichier si vous mettez votre .txt dans le dossier adapter à votre application pour Clion par exemple dans le dossier *cmake-build-debug*.
 
 Une fois entré correctement, il y a un message de succès et on passe à la sélection du mode d'affichage **Graphique** ou **Console**.
 
+---
+
 ### **Mode Console**
 Lorsque l'on choisit ce mode, il est demandé d'activer ou non l'option de la grille torique. *Une grille torique est un type de grille où les bords opposés sont connectés, formant ainsi une surface sans fin, comme un tore, où les cellules aux bords se connectent entre elles.*
+
 Une fois l'option choisie, le programme crée automatiquement un dossier de sortie dans le répertoire courant (*cmake-build-debug* sur CLion), basé sur le nom du fichier d'entrée <nom_du_fichier_dentrée>_out. Si ce dossier existe déjà, une erreur est générée pour éviter toute perte de données. Si le dossier n'existe pas, un message de succès est renvoyé et les générations sont lancées. Pour des raisons de performance, le nombre de générations est limité à 100, mais cela peut être facilement modifié dans le code si nécessaire. Chaque génération est sauvegardée fichier par fichier.
+
+---
 
 ### **Mode Graphique**
 Lorsque vous choisissez ce mode, comme pour l'autre mode, il vous sera demandé d'activer la grille torique. Une fois cette option sélectionnée, vous devrez entrer la fréquence de rafraîchissement souhaitée. Et pour finir, l'affichage graphique s'ouvrira et vous pourrez observer le jeu en temps réel. À noter que ce mode ne prévoit pas de sauvegarde.
