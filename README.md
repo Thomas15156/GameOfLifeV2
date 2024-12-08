@@ -41,7 +41,9 @@ Une fois l'option choisie, le programme crée automatiquement un dossier de sort
 
 ### **Mode Graphique**
 Lorsque vous choisissez ce mode, comme pour l'autre mode, il vous sera demandé d'activer la grille torique. Une fois cette option sélectionnée, vous devrez entrer la fréquence de rafraîchissement souhaitée. Et pour finir, l'affichage graphique s'ouvrira et vous pourrez observer le jeu en temps réel. À noter que ce mode ne prévoit pas de sauvegarde.
+
 Représentation visuelle:
+
 **⬜️ 0 cellules mortes**
 **⬛️ 1 cellules vivantes**
 **🟥 2 cellules mortes immuables**
