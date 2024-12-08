@@ -7,6 +7,14 @@
 
 ---
 
+## **Prérequis**
+Avant de pouvoir exécuter ce projet, vous devez vous assurer d'avoir les outils suivants installés sur votre machine :
+
+- CMake
+- Un compilateur C++ compatible (par exemple GCC, Clang)
+
+---
+
 ## **Installation**
 
 ### **Comment utiliser un patern pour le jeux ?**
@@ -14,13 +22,13 @@ Tout d'abord, il faut que le pattern que vous voulez utiliser ait une **syntaxe 
 
 **Puis le pattern en dessous ne comporte que **les entiers 0 , 1 ,2 et 3 :**
 
-**- 0 cellules mortes**
+**0 cellules mortes**
 
-**- 1 cellules vivantes**
+**1 cellules vivantes**
 
-**- 2 cellules mortes immuables**
+**2 cellules mortes immuables**
 
-**- 3 cellules vivantes immuables**
+**3 cellules vivantes immuables**
 
 > [!WARNING]
 > Le fichier doit bien évidemment être un .txt sinon il ne sera pas pris en compte.
@@ -36,7 +44,7 @@ Exemple :
 ````
 
 **Comment entrer le paterne ?**
-Lorsque l'on exécute le code, on doit renseigner un fichier en entrée dans la console. Il faut renseigner soit l'adresse du fichier comme ceci ()ou uniquement le nom du fichier si vous mettez votre .txt dans le dossier adapter à votre application pour Clion par exemple dans le dossier *cmake-build-debug*.
+Lorsque l'on exécute le code, on doit renseigner un fichier en entrée dans la console. Il faut renseigner soit l'adresse du fichier comme ceci (**/chemin/vers/le/fichier.txt**)ou uniquement le nom du fichier si vous mettez votre .txt dans le dossier adapter à votre application pour Clion par exemple dans le dossier *cmake-build-debug*.
 
 Une fois entré correctement, il y a un message de succès et on passe à la sélection du mode d'affichage **Graphique** ou **Console**.
 
@@ -49,11 +57,14 @@ Lorsque vous choisissez ce mode, comme pour l'autre mode, il vous sera demandé 
 
 Représentation visuelle:
 
-**⬜️ 0 cellules mortes**
+⬜️ **Cellules mortes**
 
-**⬛️ 1 cellules vivantes**
+⬛️ **Cellules vivantes**
 
-**🟥 2 cellules mortes immuables**
+🟥 **Cellules mortes immuables**
 
-**🟩 3 cellules vivantes immuables**
+🟩 **Cellules vivantes immuables**
 
+---
+
+#BOURLET Benjamin et PALISSE Thomas
