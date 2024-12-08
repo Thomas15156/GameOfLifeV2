@@ -72,4 +72,4 @@ Représentation visuelle:
 
 ---
 
-#BOURLET Benjamin et PALISSE Thomas
+### BOURLET Benjamin et PALISSE Thomas
