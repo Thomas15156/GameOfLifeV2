@@ -75,6 +75,10 @@ Lorsque vous choisissez ce mode, comme pour l'autre mode, il vous sera demandé 
 
 ---
 
+This site was built using [GitHub Pages](https://pages.github.com/).
+
+
+
 [Pattern créé par mes soins]([https://pages.github.com/](https://drive.google.com/drive/folders/1abUCeNt5N0Q2OFq-pnItLVtpspVcLbbx?usp=sharing
 )
 
