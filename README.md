@@ -11,10 +11,15 @@
 
 ### **Comment utiliser un patern pour le jeux ?**
 Tout d'abord, il faut que le pattern que vous voulez utiliser ait une **syntaxe particulière** pour le code le prenne en compte. La première ligne doit avoir **2 valeurs strictement supérieur à 0** qui représent le nombre de lignes et de colonnes dans l'exemple (5 lignes et 10 colonnes). 
-Puis le pattern en dessous ne comporte que **les entiers 0 , 1 ,2 et 3 :**
+
+**Puis le pattern en dessous ne comporte que **les entiers 0 , 1 ,2 et 3 :**
+
 **- 0 cellules mortes**
+
 **- 1 cellules vivantes**
+
 **- 2 cellules mortes immuables**
+
 **- 3 cellules vivantes immuables**
 
 > [!WARNING]
@@ -45,7 +50,10 @@ Lorsque vous choisissez ce mode, comme pour l'autre mode, il vous sera demandé 
 Représentation visuelle:
 
 **⬜️ 0 cellules mortes**
+
 **⬛️ 1 cellules vivantes**
+
 **🟥 2 cellules mortes immuables**
+
 **🟩 3 cellules vivantes immuables**
 
