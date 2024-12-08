@@ -30,8 +30,6 @@ Exemple :
 0 0 0 0 0 0 0 2 2 0
 ````
 
-<span style="color:red">Une grille torique </span>
-
 **Comment entrer le paterne ?**
 Lorsque l'on exécute le code, on doit renseigner un fichier en entrée dans la console. Il faut renseigner soit l'adresse du fichier comme ceci ()ou uniquement le nom du fichier si vous mettez votre .txt dans le dossier adapter à votre application pour Clion par exemple dans le dossier *cmake-build-debug*.
 
@@ -42,4 +40,10 @@ Lorsque l'on choisit ce mode, on nous demande d'activer ou non l'option de la gr
 Une fois choisi, le programme crée automatiquement un dossier de sortie dans le répertoire courant (*cmake-build-debug* sur CLion), basé sur le nom du fichier d'entrée <nom_du_fichier_dentrée>_out, et si ce dossier existe déjà, une erreur est générée pour éviter toute perte de données. Si le dossier n'existe pas, il renvoie un message de succès puis lance les générations. **Pour des soucis de performance, elles sont limitées à 100 générations, mais cela peut être modifié facilement dans le code si besoin**. Chaque génération est sauvegardée fichier par fichier.
 
 ### **Mode Grpahique**
-Lorsque l'on choisit ce mode, comme pour l'autre mode on nous demande l'activation de la grille torique 
+Lorsque l'on choisit ce mode, comme pour l'autre mode on nous demande l'activation de la grille torique. Une fois choisit on nous demande d'entrée la fréquence de rafraichissement puis l'affichage graphique s'ouvre. 
+Syntaxe graphique :
+**⬜️ 0 cellules mortes**
+**⬛️ 1 cellules vivantes**
+**🟥 2 cellules mortes immuables**
+**🟩 3 cellules vivantes immuables**
+
