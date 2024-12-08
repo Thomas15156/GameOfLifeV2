@@ -32,6 +32,8 @@ Tout d'abord, il faut que le pattern que vous voulez utiliser ait une **syntaxe 
 **3 cellules vivantes immuables**
 
 > [!WARNING]
+> Advises about risks or negative outcomes of certain actions.
+> [!WARNING]
 > Le fichier doit bien évidemment être un .txt sinon il ne sera pas pris en compte.
 
 <ins> Exemple : </ins>
