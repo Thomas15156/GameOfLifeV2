@@ -7,7 +7,7 @@ class Interface {
 public:
     Interface();
     std::string ChooseMode();
-    float ChooseUpdateInterval();
+    int ChooseUpdateInterval();
     bool ChooseToroidal();
     std::string get_display_mode() const;
     int get_update_interval() const;

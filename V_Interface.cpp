@@ -9,8 +9,19 @@ std::string Interface::ChooseMode() {
     std::cout << "Choose the mode:" << std::endl;
     std::cout << "1. Console Mode" << std::endl;
     std::cout << "2. Graphic Mode" << std::endl;
-    std::cout << "Enter the number of the mode: ";
-    std::cin >> mode;
+
+    while (true) {
+        std::cout << "Enter the number of the mode: ";
+        std::cin >> mode;
+
+        if (std::cin.fail() || (mode != 1 && mode != 2)) {
+            std::cin.clear();
+            std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+            std::cerr << "Invalid mode selected. Please enter 1 or 2." << std::endl;
+        } else {
+            break;
+        }
+    }
 
     switch (mode) {
         case 1:
@@ -20,15 +31,13 @@ std::string Interface::ChooseMode() {
             display_mode = "graphics";
         update_interval = ChooseUpdateInterval();
         break;
-        default:
-            std::cerr << "Invalid mode selected. Please enter 1 or 2." << std::endl;
-        std::exit(EXIT_FAILURE);
     }
+
     return display_mode;
 }
 
-float Interface::ChooseUpdateInterval() {
-    float interval;
+int Interface::ChooseUpdateInterval() {
+    int interval;
 
     while (true) {
         std::cout << "Enter the update interval in milliseconds (positive integer): ";
